@@ -1,0 +1,11 @@
+<launch>
+
+
+ <node pkg="tf" type="static_transform_publisher" name="laser" args="0.926   0.287   1.203   0.5125960581550453   0.4870988216276963   -0.5121880266206377   0.4874868659966914  world camera_link 100"/>
+
+
+<include file="$(find realsense2_camera)/launch/rs_camera.launch">
+  <arg name="filters" value="pointcloud"/>
+</include>
+
+</launch>
