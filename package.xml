@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>camera_calibration_man</name>
+  <name>depth_camera_pose_calibration</name>
   <version>0.0.0</version>
   <description>The camera_calibration_man package</description>
 
