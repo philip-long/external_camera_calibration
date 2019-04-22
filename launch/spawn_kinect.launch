@@ -1,0 +1,5 @@
+<launch>
+
+       <node name="spawn_kinect" pkg="gazebo_ros" type="spawn_model" args="-file /home/philip/.gazebo/models/kinect_ros/model.sdf -sdf -model kinect_ros" output="screen"/>
+
+</launch>
