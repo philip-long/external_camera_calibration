@@ -1,0 +1,7 @@
+<launch>
+
+
+ <node pkg="tf" type="static_transform_publisher" name="laser" args=" 0.846   0.287   1.191   0.6797973796370755   -0.7326347323196416   -0.024691059874406444   0.022632348525320374  world camera_link 100"/>
+
+
+</launch>

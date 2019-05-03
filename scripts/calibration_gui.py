@@ -88,7 +88,7 @@ class calibrationGUI:
 
     def file_save(self):
 	rospack = rospkg.RosPack()
-	path=rospack.get_path('camera_calibration_man')+'/config/'
+	path=rospack.get_path('depth_camera_pose_calibration')+'/config/'
         Q=tf.transformations.quaternion_from_euler(self.Rx,self.Ry,self.Rz)
         #Out="world_frame" + "   " + "camera_frame" + "   "+"Time",  "x" +  "y" +  "z" +   "Qx" +  "Qy" +  "Qz" +  "Qw\n"
         Out=self.world_frame + "   " + self.camera_frame + "   "+ str(rospy.Time.now())+",  "+str(self.x)+"   "+str(self.y)+"   "+str(self.z)+"   "+str(Q[0])+"   "+str(Q[1])+"   "+str(Q[2])+"   "+str(Q[3])+"\n"
@@ -101,7 +101,7 @@ class calibrationGUI:
 
     def file_save2(self):
 	rospack = rospkg.RosPack()
-	path=rospack.get_path('camera_calibration_man')+'/config/'
+	path=rospack.get_path('depth_camera_pose_calibration')+'/config/'
         Out=self.world_frame + "   " + str(self.camera_frame) + "   "+ str(rospy.Time.now())+",  "+str(self.x)+"   "+str(self.y)+"   "+str(self.z)+"   "+str(self.Rz)+"   "+str(self.Ry)+"   "+str(self.Rx)+"\n"
 
         f2 = tkFileDialog.asksaveasfile(mode='a', defaultextension="",initialdir=path)

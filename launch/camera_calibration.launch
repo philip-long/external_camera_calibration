@@ -3,7 +3,7 @@
   <arg name="camera_frame" default="kinect2_link" /> 
   <arg name="world_frame" default="world" /> 
 
- <node  name="calibration_gui"  pkg="camera_calibration_man"  type="calibration_gui.py" output="screen">
+ <node  name="calibration_gui"  pkg="depth_camera_pose_calibration"  type="calibration_gui.py" output="screen">
  <rosparam param="frame1" subst_value="True">$(arg camera_frame)</rosparam>
  <rosparam param="frame2" subst_value="True">$(arg world_frame)</rosparam>
  
